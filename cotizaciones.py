@@ -71,7 +71,7 @@ def ayudin():
     print("\n\tFormato de fechas: aaaa-mm-dd ")
     print("\t     Año en 4 dígitos, mes y día en 2 dígitos")
     print("\t     Rangos > a 5 días. Final del rango < hoy\n")
-
+    sys.exit()
 
 
 def parametros(pars_in):
