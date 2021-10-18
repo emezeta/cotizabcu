@@ -26,7 +26,7 @@ try:
     import requests
     from datetime import datetime, date
 except Exception as ex:
-    print("\n\tVerificar dependecia de módulos:\n `suds` `requests`")
+    print("\n\tVerificar dependecia de módulos:\n\t\t`suds-community` `requests` `python-dateutil")
     sys.exit(1)
 
 import urllib3
@@ -100,6 +100,7 @@ def parametros(pars_in):
                 parse(pars_in[1])
                 parse(pars_in[2])
                 _desde, _hasta = (pars_in[1],pars_in[2])
+
                 #TODO:  verificar formatos de valores para `parse`
                 #       parse acepta diferentes tipos de separadores y fechas!
                 #       analizar si vale la pena mejorar esto.
@@ -113,7 +114,7 @@ def parametros(pars_in):
             print("\n\t[ERROR]  {} debe ser mayor o igual a {} \n".format(pars_in[2], pars_in[1]))
             ayudin()
     else:
-        print("\n\t[ERROR] Verificar parámetros !! {} \n".format(pars_in[1:],))
+        print("\n\t[ERROR] Verificar parámetros {} \n".format(pars_in[1:],))
         ayudin()
     return _desde, _hasta
 
@@ -125,7 +126,7 @@ if __name__ == '__main__':
         d_fdesde = datetime.strptime(fdesde,"%Y-%m-%d").date()
         d_fhasta = datetime.strptime(fhasta,"%Y-%m-%d").date()
         if (d_fhasta - d_fdesde).days < 6 or d_fhasta > date.today():
-            print("\n\t[ERROR] El rango no es válido! ")
+            print("\n\t[ERROR] El rango no es válido ")
             print("\t\t\tEl rango debe tener una extención mayor a 5 días")
             print("\t\t\tLa fecha final del rango debe ser menor que la fecha de hoy\n")
             ayudin()
