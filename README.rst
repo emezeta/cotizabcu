@@ -14,7 +14,7 @@ requiere suds y requests::
     
 
 
-Para ejecutar: descargar y descoprimir `coticabcu` en una carpeta. Luego::
+Para ejecutar: descargar y descoprimir `cotizabcu` en una carpeta. Luego::
 
     $ cd carpeta_cotizabcu
     $ ./cotizaciones
